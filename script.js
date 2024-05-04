@@ -205,6 +205,58 @@ function isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 }
 
+function loginButtonClickHandler() {
+    const overlay = $('#overlay');
+    const loginModal = $('#loginModal');
+    const usernameInput = $('#username');
+    const passwordInput = $('#password');
+
+    overlay.css('display', 'block');
+    loginModal.fadeIn(500).addClass('animate__animated animate__fadeIn');
+
+    $('body').css('overflow', 'hidden');
+
+    $('.register').on('click', function(event) {
+        event.preventDefault();
+        var url = $(this).attr('href'); // Obtém o URL do atributo href do link
+
+        window.open(url, '_blank'); // Abre o URL em uma nova guia
+    });
+
+    // Evento de clique para fechar o modal
+    $('.close').on('click', function() {
+        overlay.css('display', 'none');
+        loginModal.removeClass('animate__animated animate__fadeIn');
+        $('body').css('overflow', 'auto');
+
+        usernameInput.val('');
+        passwordInput.val('');
+    });
+
+    
+    fetch("http://181.215.254.155:3000/api/getUsers")
+    .then((response) => {
+        return response.json(); // Transforma a resposta em JSON
+    })
+    .then((data) => {
+        console.log('Dados recebidos:', data); // Exibe os dados no console
+    })
+    .catch((error) => {
+        console.error('Erro:', error); // Exibe erros no console
+    });
+
+
+    
+
+}
+
+
+
+
+
+
+
+
 window.addEventListener('DOMContentLoaded', () => {
     categorias();
     events();
@@ -212,4 +264,6 @@ window.addEventListener('DOMContentLoaded', () => {
     createServiceCategory();
     addServiceCategory();
     adicionarOuvintesRedesSociais();
+
+    $('.loginButton').on('click', loginButtonClickHandler);
 });
