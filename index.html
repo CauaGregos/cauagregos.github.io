@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
 
 <head>
     <meta charset="UTF-8">
@@ -18,18 +21,44 @@
         <nav>
             <div class="menuNav"> </div>
         </nav>
+
         <div class="nav-vector-wrapper">
-            <img src="images/vetorDiscord.svg" alt="discord" class="nav-vector">
+            <a href="https://discord.gg/nyEZmr63vt" onclick="return false;">
+                <img src="images/vetorDiscord.svg" alt="discord" class="nav-vector">
+            </a>
+        </div>
+        
+
+        <div class="auth">
+            <button class="loginButton">Fazer Login</button>
         </div>
     </header>
-
-
 
     <div class="welcome-container"> </div>
     
     <div id="services-container" class="services-container"></div>
 
+    <div id="overlay"></div>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <img src="images/close.svg" alt="Close" class="close">
+            <div class="titleLogin">
+                <h2>Acessar<br>Painel</h2>
+                <div class="acess-divider"></div>
+                <h1>Informe seus <br>dados de acesso</h1>
+            </div>
 
+          <form id="loginForm">
+            <label for="usernameText">Usuário:</label>
+            <input type="text" id="username" name="username">
+            <label for="passwordText">Senha:</label>
+            <input type="password" id="password" name="password">
+            <button type="submit">Iniciar Sessão</button>
+            <h1>Não tem uma conta? <a href="https://discord.gg/nyEZmr63vt" class="register" target="_blank">Registre-se!</a></h1>
+
+          </form>
+        </div>
+      </div>
 
 
     <div class="highlights-container">
@@ -134,11 +163,16 @@
                 <p><b>&copy; 2024 Coding Bots.</b> Todos os direitos reservados.</p>
             </div>
             <div class="social-icons">
-                <img src="images/discordicon.svg" alt="Ícone do Discord" class="social-icon">
-                <img src="images/instagramicon.svg" alt="Ícone do Instagram" class="social-icon">
+                <a href="https://discord.gg/nyEZmr63vt" onclick="return false;">
+                    <img src="images/discordicon.svg" alt="Ícone do Discord" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/codingbotsbr/">
+                    <img src="images/instagramicon.svg" alt="Ícone do Instagram" class="social-icon">
+                </a>
             </div>
         </div>
     </footer>
+    
     
 
     <script src="script.js"></script>
