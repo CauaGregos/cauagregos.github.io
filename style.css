@@ -1403,6 +1403,7 @@ footer {
         background-image: linear-gradient(to bottom, #1F1F1F, #363636);
         padding: 1rem;
         width: 22rem;
+        margin: 0 auto;
         margin: 10rem auto;
     }
     
@@ -1453,7 +1454,7 @@ footer {
     
     .client-review {
         flex: 0 0 auto;
-        width: 20rem;
+        width: 17rem;
         height: 17rem;
         display: flex;
         flex-direction: column;
