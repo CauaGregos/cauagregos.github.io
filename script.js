@@ -65,25 +65,32 @@ let isDragging = false;
 let startPosition = 0;
 let startScrollLeft = 0;
 
-slider.addEventListener('mousedown', (e) => {
+slider.addEventListener('mousedown', startDragging);
+slider.addEventListener('touchstart', startDragging);
+
+function startDragging(e) {
     isDragging = true;
-    startPosition = e.pageX;
+    startPosition = e.pageX || e.touches[0].pageX;
     startScrollLeft = slider.scrollLeft;
-});
+}
 
-document.addEventListener('mouseup', () => {
+document.addEventListener('mouseup', stopDragging);
+document.addEventListener('touchend', stopDragging);
+
+function stopDragging() {
     isDragging = false;
-});
+}
 
-slider.addEventListener('mousemove', (e) => {
+slider.addEventListener('mousemove', dragSlider);
+slider.addEventListener('touchmove', dragSlider);
+
+function dragSlider(e) {
     if (!isDragging) return;
-    const deltaX = e.pageX - startPosition;
+    const currentX = e.pageX || e.touches[0].pageX;
+    const deltaX = currentX - startPosition;
     slider.scrollLeft = startScrollLeft - deltaX;
-});
+}
 
-slider.addEventListener('mouseleave', () => {
-    isDragging = false;
-});
 
 
 function loginButtonClickHandler(event) {
