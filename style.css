@@ -646,6 +646,7 @@ button:focus {
     justify-content: center;
     align-items: center;
     height: 100%;
+
 }
 
 
@@ -658,8 +659,8 @@ button:focus {
 }
 
 .parceiros-title {
-    margin-top: 10vw;
-    width: 23vw;
+    width: 20vw;
+    margin: 0 auto;
     font-size: 2vw;
     font-weight: bold;
     font-family: 'Mada', sans-serif;
@@ -672,7 +673,7 @@ button:focus {
     height: 0.6vw;
     border-radius: 1vw;
     margin: auto;
-    margin-top: -1.2vw;
+    margin-top: 0.2vw;
     background: var(--colorBlueWhite);
 }
 
@@ -687,6 +688,10 @@ button:focus {
     text-align: center;
     margin-bottom: 3vw;
     margin-top: 1vw;
+}
+
+.parceirosTitle-category {
+    margin-top: 10vw;
 }
 
 
@@ -794,6 +799,8 @@ button:focus {
 
 .testimonial-description {
     text-align: center;
+    width: 40vw;
+    margin: 0 auto;
     font-size: 2.7vw;
     font-family: 'Mada', sans-serif;
     color: var(--colorGray);
@@ -1046,8 +1053,6 @@ footer {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        width: 100%;
-        position: fixed;
     
         background-color: var(--colorWhite);
         background-size: cover;
@@ -1395,12 +1400,15 @@ footer {
         margin-top: 10rem;
         background-image: linear-gradient(to bottom, #1F1F1F, #363636);
         padding: 1rem;
-        width: 100%;
+        width: 22.4rem;
+        margin: 10rem auto;
     }
     
     .testimonial-description {
         text-align: center;
         font-size: 1.5rem;
+        width: 20rem;
+        margin: 2rem auto;
         font-family: 'Mada', sans-serif;
         color: var(--colorGray);
         margin-bottom: 3rem;
@@ -1524,13 +1532,16 @@ footer {
     }
     
     .parceiros-title {
-        margin-top: 5rem;
         font-size: 2rem;
-        width: 24rem;
+        width: 20rem;
         font-weight: bold;
         font-family: 'Mada', sans-serif;
         color: var(--colorBlueDark);
         text-align: center;
+    }
+
+    .parceirosTitle-category {
+        margin-top: 5rem;
     }
     
     .divider-parceiros {
@@ -1538,7 +1549,7 @@ footer {
         height: 0.6rem;
         border-radius: 1rem;
         margin: auto;
-        margin-top: -1.2rem;
+        margin-top: 0.2rem;
         background: var(--colorBlueWhite);
     }
     
