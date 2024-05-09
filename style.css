@@ -445,12 +445,12 @@ button:focus {
 .video-container {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-top: 5vw;
     top: 50%;
     left: 50%;
-    transform: translate(-43%);
+    transform: translate(-50%);
 }
 
 .video-container iframe {
@@ -1347,13 +1347,14 @@ footer {
     
     .video-container iframe {
         width: 90%;
-        margin-right: 6rem;
-        height: 100%;
+        margin: 0 auto;
+        /* height: 100%; */
         object-fit: cover;
     }
     
     .textVideo {
         width: 60%;
+        margin: 0 auto;
         text-align: center;
         z-index: 1;
         position: relative;
@@ -1375,6 +1376,7 @@ footer {
         font-size: 1.6rem;
         color: white;
         width: 13rem;
+        margin: 0 auto;
         max-width: 300px;
         background-color: var(--colorBlueWhite);
         padding: 0.9rem 0.5rem;
