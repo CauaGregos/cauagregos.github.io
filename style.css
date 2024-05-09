@@ -659,6 +659,7 @@ button:focus {
 
 .parceiros-title {
     margin-top: 10vw;
+    width: 23vw;
     font-size: 2vw;
     font-weight: bold;
     font-family: 'Mada', sans-serif;
@@ -1045,10 +1046,12 @@ footer {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        
+        width: 100%;
+        position: fixed;
+    
         background-color: var(--colorWhite);
         background-size: cover;
-        
+        overflow-x: auto; /* ou overflow-x: scroll; */
     }
 
     header {
@@ -1523,6 +1526,7 @@ footer {
     .parceiros-title {
         margin-top: 5rem;
         font-size: 2rem;
+        width: 24rem;
         font-weight: bold;
         font-family: 'Mada', sans-serif;
         color: var(--colorBlueDark);
@@ -1542,7 +1546,7 @@ footer {
     .parceiros-description {
         font-size: 1.1rem;
         font-weight: 600;
-        width: 13rem;
+        width: 20rem;
         margin: 0 auto;
         font-family: 'Mada', sans-serif;
         color: var(--textswhite);
