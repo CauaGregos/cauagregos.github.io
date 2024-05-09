@@ -1046,7 +1046,8 @@ footer {
         margin: 0;
         padding: 0;
         width: 100%;
-    
+        position: fixed;
+        
         background-color: var(--colorWhite);
         background-size: cover;
         overflow-x: auto; /* ou overflow-x: scroll; */
