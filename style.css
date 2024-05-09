@@ -679,10 +679,13 @@ button:focus {
 .parceiros-description {
     font-size: 1.1vw;
     font-weight: 600;
+    width: 23vw;
+    margin: 0 auto;
     font-family: 'Mada', sans-serif;
     color: var(--textswhite);
     text-align: center;
     margin-bottom: 3vw;
+    margin-top: 1vw;
 }
 
 
@@ -690,6 +693,7 @@ button:focus {
     padding: 0vw;
     max-width: 80vw;
     margin: 0 auto;
+    align-items: center;
 }
 
 .parceiros-wrapper {
@@ -1032,22 +1036,21 @@ footer {
 
 
 
-
 /* Celular */
 @media screen and (max-width: 768px) {
 
     /* CABEÇALHO */
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-
-    background-color: var(--colorWhite);
-    background-size: cover;
-    overflow-x: auto; /* ou overflow-x: scroll; */
-}
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    
+        background-color: var(--colorWhite);
+        background-size: cover;
+        overflow-x: auto; /* ou overflow-x: scroll; */
+    }
 
     header {
         margin: 0 auto;
@@ -1540,10 +1543,13 @@ body {
     .parceiros-description {
         font-size: 1.1rem;
         font-weight: 600;
+        width: 20rem;
+        margin: 0 auto;
         font-family: 'Mada', sans-serif;
         color: var(--textswhite);
         text-align: center;
         margin-bottom: 3rem;
+        margin-top: 1vw;
     }
     
     
